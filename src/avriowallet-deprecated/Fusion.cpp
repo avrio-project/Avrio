@@ -3,7 +3,7 @@
 // Please see the included LICENSE file for more information.
 
 /////////////////////////////
-#include <XeniumWallet-deprecated/Fusion.h>
+#include <avriowallet-deprecated/Fusion.h>
 /////////////////////////////
 
 #include <config/CryptoNoteConfig.h>
@@ -11,7 +11,7 @@
 #include <utilities/ColouredMsg.h>
 #include <wallet/WalletGreen.h>
 #include <wallet/WalletUtils.h>
-#include <XeniumWallet-deprecated/Tools.h>
+#include <avriowallet-deprecated/Tools.h>
 
 size_t makeFusionTransaction(CryptoNote::WalletGreen &wallet, uint64_t threshold, uint64_t height)
 {

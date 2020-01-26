@@ -3,16 +3,16 @@
 // Please see the included LICENSE file for more information.
 
 ///////////////////////////
-#include <XeniumWallet-deprecated/Menu.h>
+#include <avriowallet-deprecated/Menu.h>
 ///////////////////////////
 
 #include <common/SignalHandler.h>
 #include <utilities/ColouredMsg.h>
-#include <XeniumWallet-deprecated/CommandDispatcher.h>
-#include <XeniumWallet-deprecated/Commands.h>
-#include <XeniumWallet-deprecated/GetInput.h>
-#include <XeniumWallet-deprecated/Sync.h>
-#include <XeniumWallet-deprecated/Tools.h>
+#include <avriowallet-deprecated/CommandDispatcher.h>
+#include <avriowallet-deprecated/Commands.h>
+#include <avriowallet-deprecated/GetInput.h>
+#include <avriowallet-deprecated/Sync.h>
+#include <avriowallet-deprecated/Tools.h>
 
 template<typename T>
 std::string parseCommand(

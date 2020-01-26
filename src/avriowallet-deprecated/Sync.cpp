@@ -3,16 +3,16 @@
 // Please see the included LICENSE file for more information.
 
 ///////////////////////////
-#include <XeniumWallet-deprecated/Sync.h>
+#include <avriowallet-deprecated/Sync.h>
 ///////////////////////////
 
 #include <common/StringTools.h>
 #include <config/WalletConfig.h>
 #include <utilities/ColouredMsg.h>
-#include <XeniumWallet-deprecated/CommandImplementations.h>
-#include <XeniumWallet-deprecated/GetInput.h>
-#include <XeniumWallet-deprecated/Tools.h>
-#include <XeniumWallet-deprecated/Types.h>
+#include <avriowallet-deprecated/CommandImplementations.h>
+#include <avriowallet-deprecated/GetInput.h>
+#include <avriowallet-deprecated/Tools.h>
+#include <avriowallet-deprecated/Types.h>
 
 void checkForNewTransactions(std::shared_ptr<WalletInfo> walletInfo)
 {

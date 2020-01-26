@@ -3,18 +3,18 @@
 // Please see the included LICENSE file for more information.
 
 //////////////////////////////////////////
-#include <XeniumWallet/CommandDispatcher.h>
+#include <avriowallet/CommandDispatcher.h>
 //////////////////////////////////////////
 
 #include <iostream>
 #include <utilities/ColouredMsg.h>
 #include <utilities/Input.h>
-#include <XeniumWallet/AddressBook.h>
-#include <XeniumWallet/CommandImplementations.h>
-#include <XeniumWallet/Fusion.h>
-#include <XeniumWallet/Open.h>
-#include <XeniumWallet/Transfer.h>
-#include <XeniumWallet/Utilities.h>
+#include <avriowallet/AddressBook.h>
+#include <avriowallet/CommandImplementations.h>
+#include <avriowallet/Fusion.h>
+#include <avriowallet/Open.h>
+#include <avriowallet/Transfer.h>
+#include <avriowallet/Utilities.h>
 
 bool handleCommand(
     const std::string command,

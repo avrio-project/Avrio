@@ -3,7 +3,7 @@
 // Please see the included LICENSE file for more information.
 
 ////////////////////////////
-#include <XeniumWallet-deprecated/Tools.h>
+#include <avriowallet-deprecated/Tools.h>
 ////////////////////////////
 
 #include <cmath>

@@ -61,7 +61,7 @@ Binaries for Testing:
   - [ ] Linux
   - [ ] MacOS
 
-## XeniumWallet Tests
+## avriowallet Tests
 
 - Connect to local daemon
   - [ ] Windows

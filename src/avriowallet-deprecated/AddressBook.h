@@ -2,7 +2,7 @@
 //
 // Please see the included LICENSE file for more information.
 
-#include <XeniumWallet-deprecated/Types.h>
+#include <avriowallet-deprecated/Types.h>
 
 void addToAddressBook();
 

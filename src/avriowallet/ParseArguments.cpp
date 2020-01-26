@@ -3,7 +3,7 @@
 // Please see the included LICENSE file for more information.
 
 ///////////////////////////////////////
-#include <XeniumWallet/ParseArguments.h>
+#include <avriowallet/ParseArguments.h>
 ///////////////////////////////////////
 
 #include "version.h"
@@ -14,7 +14,7 @@
 #include <config/WalletConfig.h>
 #include <cxxopts.hpp>
 #include <utilities/Utilities.h>
-#include <XeniumWallet/Utilities.h>
+#include <avriowallet/Utilities.h>
 
 ZedConfig parseArguments(int argc, char **argv)
 {

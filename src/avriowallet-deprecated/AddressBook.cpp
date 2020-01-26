@@ -3,7 +3,7 @@
 // Please see the included LICENSE file for more information.
 
 //////////////////////////////////
-#include <XeniumWallet-deprecated/AddressBook.h>
+#include <avriowallet-deprecated/AddressBook.h>
 //////////////////////////////////
 
 #ifndef MSVC
@@ -16,8 +16,8 @@
 #include <serialization/SerializationTools.h>
 #include <utilities/ColouredMsg.h>
 #include <wallet/WalletUtils.h>
-#include <XeniumWallet-deprecated/Tools.h>
-#include <XeniumWallet-deprecated/Transfer.h>
+#include <avriowallet-deprecated/Tools.h>
+#include <avriowallet-deprecated/Transfer.h>
 
 const std::string getAddressBookName(AddressBook addressBook)
 {

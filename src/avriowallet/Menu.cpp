@@ -3,14 +3,14 @@
 // Please see the included LICENSE file for more information.
 
 /////////////////////////////
-#include <XeniumWallet/Menu.h>
+#include <avriowallet/Menu.h>
 /////////////////////////////
 
 #include <config/WalletConfig.h>
 #include <utilities/FormatTools.h>
-#include <XeniumWallet/CommandDispatcher.h>
-#include <XeniumWallet/Commands.h>
-#include <XeniumWallet/GetInput.h>
+#include <avriowallet/CommandDispatcher.h>
+#include <avriowallet/Commands.h>
+#include <avriowallet/GetInput.h>
 
 std::tuple<bool, bool, std::shared_ptr<WalletBackend>> selectionScreen(const ZedConfig &config)
 {

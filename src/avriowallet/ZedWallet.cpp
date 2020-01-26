@@ -6,10 +6,10 @@
 #include <config/CliHeader.h>
 #include <iostream>
 #include <utilities/ColouredMsg.h>
-#include <XeniumWallet/Menu.h>
-#include <XeniumWallet/ParseArguments.h>
-#include <XeniumWallet/Sync.h>
-#include <XeniumWallet/TransactionMonitor.h>
+#include <avriowallet/Menu.h>
+#include <avriowallet/ParseArguments.h>
+#include <avriowallet/Sync.h>
+#include <avriowallet/TransactionMonitor.h>
 
 void shutdown(
     const std::atomic<bool> &ctrl_c,

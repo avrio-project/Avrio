@@ -3,7 +3,7 @@
 // Please see the included LICENSE file for more information.
 
 /////////////////////////////////
-#include <XeniumWallet/Transfer.h>
+#include <avriowallet/Transfer.h>
 /////////////////////////////////
 
 #include <config/WalletConfig.h>
@@ -11,9 +11,9 @@
 #include <utilities/ColouredMsg.h>
 #include <utilities/FormatTools.h>
 #include <utilities/Input.h>
-#include <XeniumWallet/Fusion.h>
-#include <XeniumWallet/GetInput.h>
-#include <XeniumWallet/Utilities.h>
+#include <avriowallet/Fusion.h>
+#include <avriowallet/GetInput.h>
+#include <avriowallet/Utilities.h>
 
 namespace
 {

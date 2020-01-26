@@ -5,7 +5,7 @@
 #pragma once
 
 #include <wallet/WalletGreen.h>
-#include <XeniumWallet-deprecated/Types.h>
+#include <avriowallet-deprecated/Types.h>
 
 bool handleCommand(const std::string command, std::shared_ptr<WalletInfo> walletInfo, CryptoNote::INode &node);
 

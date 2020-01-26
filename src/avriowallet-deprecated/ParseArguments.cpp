@@ -3,7 +3,7 @@
 // Please see the included LICENSE file for more information.
 
 /////////////////////////////////////
-#include <XeniumWallet-deprecated/ParseArguments.h>
+#include <avriowallet-deprecated/ParseArguments.h>
 /////////////////////////////////////
 
 #include "version.h"
@@ -12,7 +12,7 @@
 #include <config/CryptoNoteConfig.h>
 #include <config/WalletConfig.h>
 #include <cxxopts.hpp>
-#include <XeniumWallet-deprecated/Tools.h>
+#include <avriowallet-deprecated/Tools.h>
 
 Config parseArguments(int argc, char **argv)
 {

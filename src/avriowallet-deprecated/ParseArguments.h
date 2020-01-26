@@ -4,6 +4,6 @@
 
 #pragma once
 
-#include <XeniumWallet-deprecated/Types.h>
+#include <avriowallet-deprecated/Types.h>
 
 Config parseArguments(int argc, char **argv);

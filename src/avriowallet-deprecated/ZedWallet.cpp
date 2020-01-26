@@ -3,7 +3,7 @@
 // Please see the included LICENSE file for more information.
 
 ////////////////////////////////
-#include <XeniumWallet-deprecated/ZedWallet.h>
+#include <avriowallet-deprecated/ZedWallet.h>
 ////////////////////////////////
 
 #include <common/SignalHandler.h>
@@ -20,9 +20,9 @@
 
 #include <config/WalletConfig.h>
 #include <utilities/ColouredMsg.h>
-#include <XeniumWallet-deprecated/Menu.h>
-#include <XeniumWallet-deprecated/ParseArguments.h>
-#include <XeniumWallet-deprecated/Tools.h>
+#include <avriowallet-deprecated/Menu.h>
+#include <avriowallet-deprecated/ParseArguments.h>
+#include <avriowallet-deprecated/Tools.h>
 
 int main(int argc, char **argv)
 {

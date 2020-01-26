@@ -4,7 +4,7 @@
 // Please see the included LICENSE file for more information.
 
 ///////////////////////////////////////////////
-#include <XeniumWallet/CommandImplementations.h>
+#include <avriowallet/CommandImplementations.h>
 ///////////////////////////////////////////////
 
 #include <config/CryptoNoteConfig.h>
@@ -17,12 +17,12 @@
 #include <utilities/FormatTools.h>
 #include <utilities/Input.h>
 #include <utilities/String.h>
-#include <XeniumWallet/Commands.h>
-#include <XeniumWallet/GetInput.h>
-#include <XeniumWallet/Menu.h>
-#include <XeniumWallet/Open.h>
-#include <XeniumWallet/Sync.h>
-#include <XeniumWallet/Utilities.h>
+#include <avriowallet/Commands.h>
+#include <avriowallet/GetInput.h>
+#include <avriowallet/Menu.h>
+#include <avriowallet/Open.h>
+#include <avriowallet/Sync.h>
+#include <avriowallet/Utilities.h>
 
 void changePassword(const std::shared_ptr<WalletBackend> walletBackend)
 {

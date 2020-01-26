@@ -3,14 +3,14 @@
 // Please see the included LICENSE file for more information.
 
 ///////////////////////////////
-#include <XeniumWallet/Fusion.h>
+#include <avriowallet/Fusion.h>
 ///////////////////////////////
 
 #include <iostream>
 #include <utilities/ColouredMsg.h>
 #include <utilities/FormatTools.h>
 #include <walletbackend/WalletBackend.h>
-#include <XeniumWallet/Utilities.h>
+#include <avriowallet/Utilities.h>
 
 void optimize(const std::shared_ptr<WalletBackend> walletBackend)
 {

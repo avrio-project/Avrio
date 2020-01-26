@@ -5,7 +5,7 @@
 #pragma once
 
 #include <walletbackend/WalletBackend.h>
-#include <XeniumWallet/ParseArguments.h>
+#include <avriowallet/ParseArguments.h>
 
 std::shared_ptr<WalletBackend> openWallet(const ZedConfig &config);
 

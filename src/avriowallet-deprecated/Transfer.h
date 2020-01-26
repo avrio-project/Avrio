@@ -6,7 +6,7 @@
 
 #include <config/WalletConfig.h>
 #include <memory>
-#include <XeniumWallet-deprecated/Types.h>
+#include <avriowallet-deprecated/Types.h>
 
 enum AddressType
 {

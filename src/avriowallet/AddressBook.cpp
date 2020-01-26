@@ -3,7 +3,7 @@
 // Please see the included LICENSE file for more information.
 
 ////////////////////////////////////
-#include <XeniumWallet/AddressBook.h>
+#include <avriowallet/AddressBook.h>
 ////////////////////////////////////
 
 #include <config/WalletConfig.h>
@@ -16,9 +16,9 @@
 #include <utilities/ColouredMsg.h>
 #include <utilities/Input.h>
 #include <utilities/String.h>
-#include <XeniumWallet/GetInput.h>
-#include <XeniumWallet/Transfer.h>
-#include <XeniumWallet/Utilities.h>
+#include <avriowallet/GetInput.h>
+#include <avriowallet/Transfer.h>
+#include <avriowallet/Utilities.h>
 
 const std::string getAddressBookName(const std::vector<AddressBookEntry> addressBook)
 {

@@ -7,7 +7,7 @@
 #include <iostream>
 #include <utilities/ColouredMsg.h>
 #include <walletbackend/WalletBackend.h>
-#include <XeniumWallet/ParseArguments.h>
+#include <avriowallet/ParseArguments.h>
 
 std::tuple<bool, bool, std::shared_ptr<WalletBackend>> selectionScreen(const ZedConfig &config);
 

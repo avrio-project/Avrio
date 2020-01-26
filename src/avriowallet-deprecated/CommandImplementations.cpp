@@ -3,7 +3,7 @@
 // Please see the included LICENSE file for more information.
 
 /////////////////////////////////////////////
-#include <XeniumWallet-deprecated/CommandImplementations.h>
+#include <avriowallet-deprecated/CommandImplementations.h>
 /////////////////////////////////////////////
 
 #include <atomic>
@@ -21,15 +21,15 @@
 #include <utilities/ColouredMsg.h>
 #include <utilities/FormatTools.h>
 #include <utilities/ParseExtra.h>
-#include <XeniumWallet-deprecated/AddressBook.h>
-#include <XeniumWallet-deprecated/Commands.h>
-#include <XeniumWallet-deprecated/Fusion.h>
-#include <XeniumWallet-deprecated/Menu.h>
-#include <XeniumWallet-deprecated/Open.h>
-#include <XeniumWallet-deprecated/Sync.h>
-#include <XeniumWallet-deprecated/Tools.h>
-#include <XeniumWallet-deprecated/Transfer.h>
-#include <XeniumWallet-deprecated/Types.h>
+#include <avriowallet-deprecated/AddressBook.h>
+#include <avriowallet-deprecated/Commands.h>
+#include <avriowallet-deprecated/Fusion.h>
+#include <avriowallet-deprecated/Menu.h>
+#include <avriowallet-deprecated/Open.h>
+#include <avriowallet-deprecated/Sync.h>
+#include <avriowallet-deprecated/Tools.h>
+#include <avriowallet-deprecated/Transfer.h>
+#include <avriowallet-deprecated/Types.h>
 
 void changePassword(std::shared_ptr<WalletInfo> walletInfo)
 {

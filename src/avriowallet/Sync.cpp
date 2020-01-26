@@ -3,7 +3,7 @@
 // Please see the included LICENSE file for more information.
 
 /////////////////////////////
-#include <XeniumWallet/Sync.h>
+#include <avriowallet/Sync.h>
 /////////////////////////////
 
 #include <common/SignalHandler.h>
@@ -11,7 +11,7 @@
 #include <iostream>
 #include <thread>
 #include <utilities/ColouredMsg.h>
-#include <XeniumWallet/CommandImplementations.h>
+#include <avriowallet/CommandImplementations.h>
 
 void syncWallet(const std::shared_ptr<WalletBackend> walletBackend)
 {

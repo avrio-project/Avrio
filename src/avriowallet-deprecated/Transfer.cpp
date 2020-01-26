@@ -3,7 +3,7 @@
 // Please see the included LICENSE file for more information.
 
 ///////////////////////////////
-#include <XeniumWallet-deprecated/Transfer.h>
+#include <avriowallet-deprecated/Transfer.h>
 ///////////////////////////////
 
 #include "WalletGreenTypes.h"
@@ -22,8 +22,8 @@
 #include <wallet/WalletErrors.h>
 #include <wallet/WalletGreen.h>
 #include <wallet/WalletUtils.h>
-#include <XeniumWallet-deprecated/Fusion.h>
-#include <XeniumWallet-deprecated/Tools.h>
+#include <avriowallet-deprecated/Fusion.h>
+#include <avriowallet-deprecated/Tools.h>
 
 bool parseAmount(std::string strAmount, uint64_t &amount)
 {

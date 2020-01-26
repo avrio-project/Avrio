@@ -3,13 +3,13 @@
 // Please see the included LICENSE file for more information.
 
 ///////////////////////////////////////////
-#include <XeniumWallet/TransactionMonitor.h>
+#include <avriowallet/TransactionMonitor.h>
 ///////////////////////////////////////////
 
 #include <iostream>
 #include <utilities/ColouredMsg.h>
-#include <XeniumWallet/CommandImplementations.h>
-#include <XeniumWallet/GetInput.h>
+#include <avriowallet/CommandImplementations.h>
+#include <avriowallet/GetInput.h>
 
 void TransactionMonitor::start()
 {

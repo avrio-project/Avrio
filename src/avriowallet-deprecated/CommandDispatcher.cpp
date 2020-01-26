@@ -3,15 +3,15 @@
 // Please see the included LICENSE file for more information.
 
 ////////////////////////////////////////
-#include <XeniumWallet-deprecated/CommandDispatcher.h>
+#include <avriowallet-deprecated/CommandDispatcher.h>
 ////////////////////////////////////////
 
 #include <utilities/ColouredMsg.h>
-#include <XeniumWallet-deprecated/AddressBook.h>
-#include <XeniumWallet-deprecated/CommandImplementations.h>
-#include <XeniumWallet-deprecated/Fusion.h>
-#include <XeniumWallet-deprecated/Open.h>
-#include <XeniumWallet-deprecated/Transfer.h>
+#include <avriowallet-deprecated/AddressBook.h>
+#include <avriowallet-deprecated/CommandImplementations.h>
+#include <avriowallet-deprecated/Fusion.h>
+#include <avriowallet-deprecated/Open.h>
+#include <avriowallet-deprecated/Transfer.h>
 
 bool handleCommand(const std::string command, std::shared_ptr<WalletInfo> walletInfo, CryptoNote::INode &node)
 {

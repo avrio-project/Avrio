@@ -3,10 +3,10 @@
 // Please see the included LICENSE file for more information.
 
 ////////////////////////////////
-#include <XeniumWallet-deprecated/Commands.h>
+#include <avriowallet-deprecated/Commands.h>
 ////////////////////////////////
 
-#include <XeniumWallet-deprecated/Tools.h>
+#include <avriowallet-deprecated/Tools.h>
 
 std::vector<Command> startupCommands()
 {

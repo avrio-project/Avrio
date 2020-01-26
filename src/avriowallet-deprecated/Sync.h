@@ -4,7 +4,7 @@
 
 #pragma once
 
-#include <XeniumWallet-deprecated/Types.h>
+#include <avriowallet-deprecated/Types.h>
 
 void syncWallet(CryptoNote::INode &node, std::shared_ptr<WalletInfo> walletInfo);
 

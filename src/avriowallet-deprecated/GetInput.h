@@ -6,8 +6,8 @@
 
 #include <string>
 #include <vector>
-#include <XeniumWallet-deprecated/Commands.h>
-#include <XeniumWallet-deprecated/Types.h>
+#include <avriowallet-deprecated/Commands.h>
+#include <avriowallet-deprecated/Types.h>
 
 std::string yellowANSIMsg(std::string msg);
 

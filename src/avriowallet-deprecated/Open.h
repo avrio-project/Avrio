@@ -4,7 +4,7 @@
 
 #pragma once
 
-#include <XeniumWallet-deprecated/Types.h>
+#include <avriowallet-deprecated/Types.h>
 
 std::shared_ptr<WalletInfo> importFromKeys(
     CryptoNote::WalletGreen &wallet,

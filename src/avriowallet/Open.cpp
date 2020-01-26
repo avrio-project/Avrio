@@ -3,7 +3,7 @@
 // Please see the included LICENSE file for more information.
 
 /////////////////////////////
-#include <XeniumWallet/Open.h>
+#include <avriowallet/Open.h>
 /////////////////////////////
 
 #include <common/FileSystemShim.h>
@@ -14,9 +14,9 @@
 #include <utilities/ColouredMsg.h>
 #include <utilities/Input.h>
 #include <utilities/String.h>
-#include <XeniumWallet/CommandImplementations.h>
+#include <avriowallet/CommandImplementations.h>
 #include <utilities/PasswordContainer.h>
-#include <XeniumWallet/Utilities.h>
+#include <avriowallet/Utilities.h>
 
 std::shared_ptr<WalletBackend> importViewWallet(const ZedConfig &config)
 {

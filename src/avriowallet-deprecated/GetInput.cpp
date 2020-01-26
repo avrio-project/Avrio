@@ -3,13 +3,13 @@
 // Please see the included LICENSE file for more information.
 
 ///////////////////////////////
-#include <XeniumWallet-deprecated/GetInput.h>
+#include <avriowallet-deprecated/GetInput.h>
 ///////////////////////////////
 
 #include "linenoise.hpp"
 
-#include <XeniumWallet-deprecated/Sync.h>
-#include <XeniumWallet-deprecated/Tools.h>
+#include <avriowallet-deprecated/Sync.h>
+#include <avriowallet-deprecated/Tools.h>
 
 /* Note: this is not portable, it only works with terminals that support ANSI
    codes (e.g., not Windows) - however! due to the way linenoise-cpp works,

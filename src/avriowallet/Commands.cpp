@@ -3,7 +3,7 @@
 // Please see the included LICENSE file for more information.
 
 /////////////////////////////////
-#include <XeniumWallet/Commands.h>
+#include <avriowallet/Commands.h>
 /////////////////////////////////
 
 #include <config/WalletConfig.h>

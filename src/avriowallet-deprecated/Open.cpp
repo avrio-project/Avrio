@@ -3,7 +3,7 @@
 // Please see the included LICENSE file for more information.
 
 ///////////////////////////
-#include <XeniumWallet-deprecated/Open.h>
+#include <avriowallet-deprecated/Open.h>
 ///////////////////////////
 
 #include <config/Constants.h>
@@ -12,11 +12,11 @@
 #include <mnemonics/Mnemonics.h>
 #include <utilities/ColouredMsg.h>
 #include <wallet/WalletErrors.h>
-#include <XeniumWallet-deprecated/CommandImplementations.h>
+#include <avriowallet-deprecated/CommandImplementations.h>
 #include <utilities/PasswordContainer.h>
-#include <XeniumWallet-deprecated/Tools.h>
-#include <XeniumWallet-deprecated/Transfer.h>
-#include <XeniumWallet-deprecated/Types.h>
+#include <avriowallet-deprecated/Tools.h>
+#include <avriowallet-deprecated/Transfer.h>
+#include <avriowallet-deprecated/Types.h>
 
 std::shared_ptr<WalletInfo> createViewWallet(CryptoNote::WalletGreen &wallet)
 {

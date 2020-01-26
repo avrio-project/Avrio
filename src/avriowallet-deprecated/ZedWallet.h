@@ -5,7 +5,7 @@
 #pragma once
 
 #include <noderpcproxy/NodeRpcProxy.h>
-#include <XeniumWallet-deprecated/Types.h>
+#include <avriowallet-deprecated/Types.h>
 
 int main(int argc, char **argv);
 

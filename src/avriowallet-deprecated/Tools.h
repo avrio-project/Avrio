@@ -9,7 +9,7 @@
 #include <memory>
 #include <string>
 #include <vector>
-#include <XeniumWallet-deprecated/Types.h>
+#include <avriowallet-deprecated/Types.h>
 
 void confirmPassword(const std::string &walletPass, const std::string &msg = "");
 
