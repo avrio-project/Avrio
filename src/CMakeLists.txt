@@ -44,7 +44,7 @@ file(GLOB_RECURSE WalletApi walletapi/*)
 file(GLOB_RECURSE WalletBackend walletbackend/*)
 file(GLOB_RECURSE WalletService walletservice/*)
 file(GLOB_RECURSE WalletUpgrader walletupgrader/*)
-file(GLOB_RECURSE AvrioWallet-deprecated avrio-deprecated/*)
+file(GLOB_RECURSE AvrioWallet-deprecated avriowallet-deprecated/*)
 file(GLOB_RECURSE AvrioWallet avriowallet/*)
 
 if (MSVC)
