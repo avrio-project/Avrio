@@ -190,7 +190,7 @@ namespace CryptoNote
         int64_t &emissionChange) const
     {
         
-        uint64_t baseReward = 500; // (0.5 AIO) for testnet
+        uint64_t baseReward = 1000; // (1 AIO) 
 
         logger(TRACE) << "Base reward " << baseReward;
 
