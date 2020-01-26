@@ -371,7 +371,7 @@ int main(int argc, char **argv)
             "This software will be removed in Xenium version v3.2.0 and heigher.";
         logger(Logging::WARNING, Logging::BRIGHT_YELLOW) <<
             "If you are a pool owner please look into recoding "
-            "your pool's payment system to rather use the XeniumWalletApi software!";
+            "your pool's payment system to rather use the avriowalletApi software!";
 
         const auto &config = pg.getConfig();
 

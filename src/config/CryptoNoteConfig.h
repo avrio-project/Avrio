@@ -19,15 +19,17 @@ namespace CryptoNote
 {
     namespace parameters
     {
-        const uint64_t DIFFICULTY_TARGET                        =                               35; // seconds
+        const uint64_t DIFFICULTY_TARGET                        =                               180; // seconds (3 mins)
 
-        // MONEY_SUPPLY - total number coins to be generated
-        const uint64_t MONEY_SUPPLY                             = UINT64_C(10'000'000'000'000'000); // 10 billion XNU
-
+        // Infinite supply, following is obsolute
+        const uint64_t MONEY_SUPPLY                             = UINT64_C(10'000'000'000'000'000);
+        const unsigned EMISSION_SPEED_FACTOR                    =                               25;
+        static_assert(EMISSION_SPEED_FACTOR <= 8 * sizeof(uint64_t), "Bad EMISSION_SPEED_FACTOR");
+        // end obsoulte
         const uint32_t CRYPTONOTE_MAX_BLOCK_NUMBER              =                    1'000'000'000;
         const size_t   CRYPTONOTE_MAX_BLOCK_BLOB_SIZE           =                      500'000'000;
         const size_t   CRYPTONOTE_MAX_TX_SIZE                   =                      100'000'000;
-        const uint64_t CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX  =                           674101;
+        const uint64_t CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX  =                           0x94d49;
         const uint32_t CRYPTONOTE_MINED_MONEY_UNLOCK_WINDOW     =                               40;
         const uint64_t CRYPTONOTE_BLOCK_FUTURE_TIME_LIMIT       =                      60 * 60 * 2;
         const uint64_t CRYPTONOTE_BLOCK_FUTURE_TIME_LIMIT_V3    =            3 * DIFFICULTY_TARGET;
@@ -43,23 +45,10 @@ namespace CryptoNote
         const uint64_t LWMA_2_DIFFICULTY_BLOCK_INDEX_V2         =                          200'000;
         const uint64_t LWMA_2_DIFFICULTY_BLOCK_INDEX_V3         =                          500'000;
 
-        const unsigned EMISSION_SPEED_FACTOR                    =                               25;
-        static_assert(EMISSION_SPEED_FACTOR <= 8 * sizeof(uint64_t), "Bad EMISSION_SPEED_FACTOR");
 
-        const uint64_t GENESIS_BLOCK_REWARD                     =         UINT64_C(82'000'000'000);
-        /*
-        PREMINE
-        =======
+        const uint64_t GENESIS_BLOCK_REWARD                     =         UINT64_C(0); // Premine = 0;
 
-        TurtleGold swap:     ‭54,041,420 XNU
-        Xenium swap:         27,938,580 XNU
-        TipBot Faucet funds:     10,000 XNU
-        Airdrops:                10,000 XNU
-        ====================================
-        Total:               82,000,000 XNU
-        */
-
-        const char     GENESIS_COINBASE_TX_HEX[] = "012801ff000180e8d2bcb102029bebd3bfdef8d9478f5da0cb254aac0bf43ad646b949ce3ceb50bf2809d974eb21018675a77c262c41c50938ffac0d7bb7b465fc667e3ba8a75cc26d0c77dbd080bd";
+        const char GENESIS_COINBASE_TX_HEX[] = "20adf281a0a8b81500002101917ff5cf006951e46d9c3ca55fefa200f81ee44ef39b2004b3ca395e121695ac";
 
         static_assert(sizeof(GENESIS_COINBASE_TX_HEX) / sizeof(*GENESIS_COINBASE_TX_HEX) != 1, "GENESIS_COINBASE_TX_HEX must not be empty.");
 
@@ -74,8 +63,8 @@ namespace CryptoNote
         const size_t   CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE_CURRENT = CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE;
         const size_t   CRYPTONOTE_COINBASE_BLOB_RESERVED_SIZE            =                                       600;
 
-        const size_t   CRYPTONOTE_DISPLAY_DECIMAL_POINT                  =                                         3;
-        const uint64_t MINIMUM_FEE                                       =                             UINT64_C(500);
+        const size_t   CRYPTONOTE_DISPLAY_DECIMAL_POINT                  =                                         4;
+        const uint64_t MINIMUM_FEE                                       =                             UINT64_C(250); //0.25
 
         /* This section defines our minimum and maximum mixin counts required for transactions */
         const uint64_t MINIMUM_MIXIN_V1                        =                                      0;
@@ -88,14 +77,14 @@ namespace CryptoNote
         const uint64_t MAXIMUM_MIXIN_V3                        =                                      2;
 
         /* The heights to activate the mixin limits at */
-        const uint32_t MIXIN_LIMITS_V1_HEIGHT                  =                                 10'000;
+        const uint32_t MIXIN_LIMITS_V1_HEIGHT                  =                                 5;
         const uint32_t MIXIN_LIMITS_V2_HEIGHT                  =                                200'000;
         const uint32_t MIXIN_LIMITS_V3_HEIGHT                  =                                500'000;
 
-        const uint64_t DEFAULT_MIXIN_V0                        =                                      0;
+        const uint64_t DEFAULT_MIXIN_V0                        =                                      1;
         const uint64_t DEFAULT_MIXIN_V1                        =                                      1;
         const uint64_t DEFAULT_MIXIN_V2                        =                                      3;
-        const uint64_t DEFAULT_MIXIN_V3                        =                       MAXIMUM_MIXIN_V3;
+        const uint64_t DEFAULT_MIXIN_V3                        =                                      2;
 
         const uint64_t DEFAULT_DUST_THRESHOLD                  =                          UINT64_C(100);
         const uint64_t DEFAULT_DUST_THRESHOLD_V2               =                            UINT64_C(0);
@@ -157,16 +146,16 @@ namespace CryptoNote
            at any given time. Incoming fusion transactions that attempt to exceed this limit
            will be rejected from the pool and will not be added. This mechanism is in place
            to help curtail fusion transaction spam. */
-        const size_t   FUSION_TX_MAX_POOL_COUNT             =                                                            25;
+        const size_t   FUSION_TX_MAX_POOL_COUNT             =                                                            30;
 
         const size_t   NORMAL_TX_MAX_OUTPUT_RATIO_V1        =                                                            10;
         const size_t   NORMAL_TX_MAX_OUTPUT_RATIO_V1_HEIGHT =                                                       350'000;
 
-        const uint32_t UPGRADE_HEIGHT_V2                    =                 50; // Upgrade height for CN-Dark Variant 1 switch
-        const uint32_t UPGRADE_HEIGHT_V3                    =                500; // Upgrade height for CN-Dark Lite Variant 1 switch
-        const uint32_t UPGRADE_HEIGHT_V4                    =              1'000; // Upgrade height for CN-Lite Variant 1 switch.
-        const uint32_t UPGRADE_HEIGHT_V5                    =            100'000; // Upgrade height for CN-Turtle Variant 2 switch.
-        const uint32_t UPGRADE_HEIGHT_V6                    =          1'000'000; // Upgrade height for Chukwa switch.
+        const uint32_t UPGRADE_HEIGHT_V2                    =                 1; // Upgrade height for CN-Dark Variant 1 switch
+        const uint32_t UPGRADE_HEIGHT_V3                    =                2; // Upgrade height for CN-Dark Lite Variant 1 switch
+        const uint32_t UPGRADE_HEIGHT_V4                    =              3; // Upgrade height for CN-Lite Variant 1 switch.
+        const uint32_t UPGRADE_HEIGHT_V5                    =            4; // Upgrade height for CN-RIO
+        const uint32_t UPGRADE_HEIGHT_V6                    =          CRYPTONOTE_MAX_BLOCK_NUMBER - 1; // Upgrade height for Chukwa switch.
 
         const unsigned UPGRADE_VOTING_THRESHOLD             =                                                            90; // percent
         const uint32_t UPGRADE_VOTING_WINDOW                =                             EXPECTED_NUMBER_OF_BLOCKS_PER_DAY; // blocks
@@ -187,7 +176,7 @@ namespace CryptoNote
         };
 
         /* MAKE SURE TO UPDATE THIS VALUE WITH EVERY MAJOR RELEASE BEFORE A FORK */
-        const uint64_t SOFTWARE_SUPPORTED_FORK_INDEX     =                                                           1;
+        const uint64_t SOFTWARE_SUPPORTED_FORK_INDEX     =                                                           0;
         const uint64_t FORK_HEIGHTS_SIZE                 =                sizeof(FORK_HEIGHTS) / sizeof(*FORK_HEIGHTS);
 
         /* The index in the FORK_HEIGHTS array that this version of the software will
@@ -208,8 +197,8 @@ namespace CryptoNote
         const char     MINER_CONFIG_FILE_NAME[]           =                                          "miner_conf.json";
     } // namespace parameters
 
-    const char     CRYPTONOTE_NAME[]           =              "Xenium";
-    const char     DATADIR_NAME[]              =             "Xenium3";
+    const char     CRYPTONOTE_NAME[]           =              "Avrio";
+    const char     DATADIR_NAME[]              =             "avrio_data";
 
     const uint8_t  TRANSACTION_VERSION_1       =                     1;
     const uint8_t  TRANSACTION_VERSION_2       =                     2;
@@ -239,9 +228,9 @@ namespace CryptoNote
     const uint64_t BLOCKS_SYNCHRONIZING_DEFAULT_COUNT        =              100; // by default, blocks count in blocks downloading
     const size_t   COMMAND_RPC_GET_BLOCKS_FAST_MAX_COUNT     =             1000;
 
-    const int      P2P_DEFAULT_PORT                          =            32778;
-    const int      RPC_DEFAULT_PORT                          =            32779;
-    const int      SERVICE_DEFAULT_PORT                      =            32780;
+    const int      P2P_DEFAULT_PORT                          =            34523;
+    const int      RPC_DEFAULT_PORT                          =            24524;
+    const int      SERVICE_DEFAULT_PORT                      =            24562;
 
     const size_t   P2P_LOCAL_WHITE_PEERLIST_LIMIT            =             1000;
     const size_t   P2P_LOCAL_GRAY_PEERLIST_LIMIT             =             5000;
@@ -256,7 +245,7 @@ namespace CryptoNote
 
     // This defines the number of versions ahead we must see peers before we start displaying
     // warning messages that we need to upgrade our software.
-    const uint8_t  P2P_UPGRADE_WINDOW                        =                2;
+    const uint8_t  P2P_UPGRADE_WINDOW                        =                1;
     const size_t   P2P_CONNECTION_MAX_WRITE_BUFFER_SIZE      = 32 * 1024 * 1024; // 32 MB
     const uint32_t P2P_DEFAULT_CONNECTIONS_COUNT             =                8;
     const size_t   P2P_DEFAULT_WHITELIST_CONNECTIONS_PERCENT =               70;
@@ -275,20 +264,16 @@ namespace CryptoNote
     const uint32_t DATABASE_DEFAULT_MAX_OPEN_FILES           =              125; // 125 files
     const uint16_t DATABASE_DEFAULT_BACKGROUND_THREADS_COUNT =                4; // 4 DB threads
 
-    const char        LATEST_VERSION_URL[] =     "https://github.com/xenium-project/xenium/releases/latest";
-    const std::string LICENSE_URL          = "https://github.com/xenium-project/xenium/blob/master/LICENSE";
+    const char        LATEST_VERSION_URL[] =     "https://github.com/avrio-project/avrio-cryptonight/releases/latest";
+    const std::string LICENSE_URL          = "https://github.com/avrio-project/avrio-cryptonight/blob/master/LICENSE";
 
     const static boost::uuids::uuid CRYPTONOTE_NETWORK = {
         {
-            0x6a, 0x4f, 0xed, 0xd6, 0x67, 0xf2, 0x5a, 0x9a, 0x7e, 0x6b, 0xb3, 0xa8, 0xe8, 0xa0, 0xc2, 0xf3
+            0x3a, 0x4f, 0xed, 0xa6, 0x76, 0xf2, 0x5b, 0x9a, 0x7e, 0x8b, 0xb3, 0xa8, 0xe8, 0xa0, 0xc4, 0xf3
         }
     };
 
     const char *const SEED_NODES[] = {
-        "142.93.239.206:32778", // MunchieHigh420 - 1
-          "94.211.137.5:32778", // MunchieHigh420 - 2
-          "94.214.85.66:32778", // Gabcraftia
-         "85.214.241.85:32778", // Lein Ad
-        "46.251.239.146:32778"  // Waterdev | Valentin
+        "99.248.224.55:34523" // Leo, (helives.mine2.live)
     };
 } // namespace CryptoNote

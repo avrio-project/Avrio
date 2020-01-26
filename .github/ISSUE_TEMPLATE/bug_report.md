@@ -38,7 +38,7 @@ Please insert your default verbosity CMake output here
 
 ### Issue Report
 
-**Binary Reported:** <!-- does this issue affect XeniumWallet, XeniumDaemon, XeniumService-deprecated, XeniumMiner? -->
+**Binary Reported:** <!-- does this issue affect avriowallet, XeniumDaemon, XeniumService-deprecated, XeniumMiner? -->
 
 #### Expected Behavior
 
