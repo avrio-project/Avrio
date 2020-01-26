@@ -1,5 +1,5 @@
 # Avrio CryptoNight
-This si the cryptonight based version of Avrio, this will be used untill the from-scratch, new code base is finsihed. At that point the coins on this network will bes swapped over and this softwer will be deprecated. 
+This is the cryptonight based version of Avrio, this will be used untill the from-scratch, new code base is finsihed. At that point the coins on this network will bes swapped over and this softwer will be deprecated. 
 This codebase is based off [xenium](https://github.com/xenium-project/xenium), consider checking them out!
 
 ## Installing
