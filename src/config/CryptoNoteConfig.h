@@ -29,7 +29,7 @@ namespace CryptoNote
         const uint32_t CRYPTONOTE_MAX_BLOCK_NUMBER              =                    1'000'000'000;
         const size_t   CRYPTONOTE_MAX_BLOCK_BLOB_SIZE           =                      500'000'000;
         const size_t   CRYPTONOTE_MAX_TX_SIZE                   =                      100'000'000;
-        const uint64_t CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX  =                           674101;
+        const uint64_t CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX  =                           0xaec4a;
         const uint32_t CRYPTONOTE_MINED_MONEY_UNLOCK_WINDOW     =                               40;
         const uint64_t CRYPTONOTE_BLOCK_FUTURE_TIME_LIMIT       =                      60 * 60 * 2;
         const uint64_t CRYPTONOTE_BLOCK_FUTURE_TIME_LIMIT_V3    =            3 * DIFFICULTY_TARGET;
@@ -63,8 +63,8 @@ namespace CryptoNote
         const size_t   CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE_CURRENT = CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE;
         const size_t   CRYPTONOTE_COINBASE_BLOB_RESERVED_SIZE            =                                       600;
 
-        const size_t   CRYPTONOTE_DISPLAY_DECIMAL_POINT                  =                                         3;
-        const uint64_t MINIMUM_FEE                                       =                             UINT64_C(500);
+        const size_t   CRYPTONOTE_DISPLAY_DECIMAL_POINT                  =                                         4;
+        const uint64_t MINIMUM_FEE                                       =                             UINT64_C(250); 0.25
 
         /* This section defines our minimum and maximum mixin counts required for transactions */
         const uint64_t MINIMUM_MIXIN_V1                        =                                      0;
