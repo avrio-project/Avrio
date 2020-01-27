@@ -46,7 +46,7 @@ namespace CryptoNote
         const uint64_t LWMA_2_DIFFICULTY_BLOCK_INDEX_V3         =                          500'000;
 
 
-        const uint64_t GENESIS_BLOCK_REWARD                     =         UINT64_C(0); // Premine = 0;
+        const uint64_t GENESIS_BLOCK_REWARD                     =         UINT64_C(10000); // Premine = 0;
 
         const char GENESIS_COINBASE_TX_HEX[] = "109d9386e7b6b415000021013e3e625f93c38cb7c14c451ae9d211e4308a16f2c5232ff111eb0726c4c5f303";
 
