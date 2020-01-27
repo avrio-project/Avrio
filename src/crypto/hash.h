@@ -27,11 +27,10 @@
 #define CN_DARK_SCRATCHPAD 524288
 #define CN_DARK_ITERATIONS 262144
 
-// Standard CryptoNight RIO
-// No point in creating a whole new fork height as it provides no advantage 
-#define CN_TURTLE_PAGE_SIZE 131072
-#define CN_TURTLE_SCRATCHPAD 65536
-#define CN_TURTLE_ITERATIONS 32768
+// Standard CryptoNight Turtle
+#define CN_TURTLE_PAGE_SIZE 262144
+#define CN_TURTLE_SCRATCHPAD 262144
+#define CN_TURTLE_ITERATIONS 131072
 
 // CryptoNight Soft Shell Definitions
 #define CN_SOFT_SHELL_MEMORY 262144 // This defines the lowest memory utilization for our curve
