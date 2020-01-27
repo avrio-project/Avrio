@@ -48,7 +48,7 @@ namespace CryptoNote
 
         const uint64_t GENESIS_BLOCK_REWARD                     =         UINT64_C(0); // Premine = 0;
 
-        const char GENESIS_COINBASE_TX_HEX[] = "20adf281a0a8b81500002101917ff5cf006951e46d9c3ca55fefa200f81ee44ef39b2004b3ca395e121695ac";
+        const char GENESIS_COINBASE_TX_HEX[] = "0x";
 
         static_assert(sizeof(GENESIS_COINBASE_TX_HEX) / sizeof(*GENESIS_COINBASE_TX_HEX) != 1, "GENESIS_COINBASE_TX_HEX must not be empty.");
 
