@@ -153,7 +153,7 @@ namespace CryptoNote
         const uint32_t UPGRADE_HEIGHT_V2                    =                 1; // Upgrade height for CN-Dark Variant 1 switch
         const uint32_t UPGRADE_HEIGHT_V3                    =                2; // Upgrade height for CN-Dark Lite Variant 1 switch
         const uint32_t UPGRADE_HEIGHT_V4                    =              3; // Upgrade height for CN-Lite Variant 1 switch.
-        const uint32_t UPGRADE_HEIGHT_V5                    =            4; // Upgrade height for CN-RIO
+        const uint32_t UPGRADE_HEIGHT_V5                    =            4; // Upgrade height for CN-TRTL
         const uint32_t UPGRADE_HEIGHT_V6                    =          CRYPTONOTE_MAX_BLOCK_NUMBER - 1; // Upgrade height for Chukwa switch.
 
         const unsigned UPGRADE_VOTING_THRESHOLD             =                                                            90; // percent
@@ -189,15 +189,15 @@ namespace CryptoNote
         /* Make sure CURRENT_FORK_INDEX is a valid index, unless FORK_HEIGHTS is empty */
         static_assert(FORK_HEIGHTS_SIZE == 0 || CURRENT_FORK_INDEX < FORK_HEIGHTS_SIZE, "CURRENT_FORK_INDEX out of range of FORK_HEIGHTS!");
 
-        const char     CRYPTONOTE_BLOCKS_FILENAME[]       =                                               "blocks.bin";
-        const char     CRYPTONOTE_BLOCKINDEXES_FILENAME[] =                                         "blockindexes.bin";
-        const char     CRYPTONOTE_POOLDATA_FILENAME[]     =                                            "poolstate.bin";
-        const char     P2P_NET_DATA_FILENAME[]            =                                             "p2pstate.bin";
-        const char     MINER_CONFIG_FILE_NAME[]           =                                          "miner_conf.json";
+        const char     CRYPTONOTE_BLOCKS_FILENAME[]       =                                               "avrio_blocks.bin";
+        const char     CRYPTONOTE_BLOCKINDEXES_FILENAME[] =                                         "avrio_blockindexes.bin";
+        const char     CRYPTONOTE_POOLDATA_FILENAME[]     =                                            "avrio_poolstate.bin";
+        const char     P2P_NET_DATA_FILENAME[]            =                                             "avrio_p2pstate.bin";
+        const char     MINER_CONFIG_FILE_NAME[]           =                                          "avrio_miner_conf.json";
     } // namespace parameters
 
     const char     CRYPTONOTE_NAME[]           =              "Avrio";
-    const char     DATADIR_NAME[]              =             "avrio_data";
+    const char     DATADIR_NAME[]              =             "avrio";
 
     const uint8_t  TRANSACTION_VERSION_1       =                     1;
     const uint8_t  TRANSACTION_VERSION_2       =                     2;
@@ -236,8 +236,8 @@ namespace CryptoNote
 
     // P2P Network Configuration Section - This defines our current P2P network version
     // and the minimum version for communication between nodes
-    const uint8_t  P2P_CURRENT_VERSION                       =                1;
-    const uint8_t  P2P_MINIMUM_VERSION                       =                1;
+    const uint8_t  P2P_CURRENT_VERSION                       =                2;
+    const uint8_t  P2P_MINIMUM_VERSION                       =                2;
 
     // This defines the minimum P2P version required for lite blocks propogation
     const uint8_t  P2P_LITE_BLOCKS_PROPOGATION_VERSION       =                1;
@@ -268,7 +268,7 @@ namespace CryptoNote
 
     const static boost::uuids::uuid CRYPTONOTE_NETWORK = {
         {
-            0x3a, 0x4f, 0xed, 0xa6, 0x76, 0xf2, 0x5b, 0x9a, 0x7e, 0x8b, 0xb3, 0xa8, 0xe8, 0xa0, 0xc4, 0xf3
+            0x7a, 0x4f, 0xed, 0xa6, 0x77, 0xf2, 0x5b, 0x9a, 0x7e, 0x3b, 0xb3, 0xa8, 0xe8, 0xa1, 0xc4, 0xf2
         }
     };
 
