@@ -1,5 +1,5 @@
 # Avrio CryptoNight
-This is the cryptonight based version of Avrio, this will be used untill the from-scratch, new code base is finsihed. At that point the coins on this network will be swapped over and this software will be deprecated. 
+This is the cryptonight based version of Avrio, this will be used until the from-scratch, new code base is finished. At that point the coins on this network will be swapped over and this software will be deprecated. 
 This codebase is based off [xenium](https://github.com/xenium-project/xenium), consider checking them out!
 
 ## Installing
@@ -200,7 +200,7 @@ Hi Avrio contributor, thanks for forking and sending back Pull Requests. Extensi
 // Copyright (c) 2014-2018, The Monero Project,
 // Copyright (c) 2018-2019, The TurtleCoin Developers,
 // Copyright (c) 2019, The Xenium Developers,
-// Copyright (c) 2019, The AVrio Developers
+// Copyright (c) 2019, The Avrio Developers
 //
 // Please see the included LICENSE file for more information.
 ```
