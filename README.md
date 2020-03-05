@@ -9,6 +9,8 @@ We offer binary images of the latest releases [here](https://github.com/avrio-pr
 If you would like to compile yourself, read on.
 
 ## How To Compile
+If you have a multi thread pc (eg not 20 years old) 
+Then replace the make command with make -j <core_count>
 
 ### Build Optimization
 
