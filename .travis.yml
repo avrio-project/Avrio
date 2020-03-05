@@ -59,17 +59,16 @@ script:
 - mkdir build && cd build
 - cmake -DARCH=default -DCMAKE_BUILD_TYPE=Release -DSTATIC=true ..
 - make -j2
-- if [[ "$LABEL" != "aarch64" ]]; then ./src/XeniumCryptotest ; fi
 
 before_deploy:
 - if [[ "${TRAVIS_TAG}" == "" ]]; then export TRAVIS_TAG=${TRAVIS_COMMIT} ; fi
 - cd src
-- ${STRIP} Xenium*
-- rm -rf xenium-${TRAVIS_TAG}
-- mkdir xenium-${TRAVIS_TAG}
-- cp Xenium* xenium-${TRAVIS_TAG}/
-- cp ../../LICENSE xenium-${TRAVIS_TAG}/
-- tar cvfz xenium-${TRAVIS_TAG}-${LABEL}.tar.gz xenium-${TRAVIS_TAG}/
+- ${STRIP} Avrio*
+- rm -rf avrio-${TRAVIS_TAG}
+- mkdir avrio-${TRAVIS_TAG}
+- cp Avrio* avrio-${TRAVIS_TAG}/
+- cp ../../LICENSE avrio-${TRAVIS_TAG}/
+- tar cvfz avrio-${TRAVIS_TAG}-${LABEL}.tar.gz avrio-${TRAVIS_TAG}/
 
 deploy:
   provider: releases
@@ -77,10 +76,10 @@ deploy:
   api_key:
     secure: iir04+A2oVuDxTapN697PoT9VG0qXtmb/U4EqdgnhTlQo/SD44wQzueyqmgQbw7YPT3iFoCG78JHgeEbQLlxrSB1G9PG79bK4Cqo8LlI5YRb1vpQwOtHnxbguNkmjzW31KlXIxxQMXu/ED9L+v5nhwMcyeghAn2rEOgpPFRPV6am9Zq1kl5SeY7vOkEeK+bT7hl7fFHt2uZwhq9fK0BM68L0pXKvBQNU/7yDOMZ7064echbWrptdj1ZZh6UAunCWEIH17ITvEgZ3YxdqGilbldswsD7gTgV8W6ckB1T/g3VJPb70LYk6LfIv3UKlY5UzTN5sWNBDSfKVdVnNN9XFrOVRhgasVH+sQIuxEdUUJTj0EJV11iVvmMAZ9A4KrQHSLoepiGprqtQ1TWfn9AKvhOQyFY+cM8p4EjdTwoJpr00gSF8sObkLjtWdwxJzUwi0vYyRU7g92Zvnb6isD4XU6PzZaJIBfKUbaMXZEbbVVrQjt8dQ+35t0sEq0L8qi1MbUCIL4Vd6wR3HCGl9CQ8L9FlU7mFkBMzPIv+SVHlgX+JiupE3Re9vYEStG4fyMW1VZgfuInf1ZE9nffYcT40o5z96YWAT6rM19f5vjjvmJDWwkUVciZhBtiVUJR/b/DKrpGUl1s6L7pxmucwq/hbzXMY52aFtPQn5Ro8l/1tOhks=
   file:
-    - xenium-${TRAVIS_TAG}-${LABEL}.tar.gz
+    - avrio-${TRAVIS_TAG}-${LABEL}.tar.gz
   cleanup: false
   on:
-    repo: xenium-project/xenium
+    repo: avrio-project/avrio
     condition: "$_DEPLOYABLE = true"
     tags: true
     all_branches: true
