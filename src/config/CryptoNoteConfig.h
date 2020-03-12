@@ -155,7 +155,7 @@ namespace CryptoNote
         const uint32_t UPGRADE_HEIGHT_V3                    =                2; // Upgrade height for CN-Dark Lite Variant 1 switch
         const uint32_t UPGRADE_HEIGHT_V4                    =              3; // Upgrade height for CN-Lite Variant 1 switch.
         const uint32_t UPGRADE_HEIGHT_V5                    =            4; // Upgrade height for CN-TRTL
-        const uint32_t UPGRADE_HEIGHT_V6                    =          CRYPTONOTE_MAX_BLOCK_NUMBER - 1; // Upgrade height for Chukwa switch.
+        const uint32_t UPGRADE_HEIGHT_V6                    =          24000; // Upgrade height for Chukwa switch.
 
         const unsigned UPGRADE_VOTING_THRESHOLD             =                                                            90; // percent
         const uint32_t UPGRADE_VOTING_WINDOW                =                             EXPECTED_NUMBER_OF_BLOCKS_PER_DAY; // blocks
@@ -165,18 +165,12 @@ namespace CryptoNote
 
         /* Block heights we are going to have hard forks at */
         const uint64_t FORK_HEIGHTS[] = {
-              250'000, // 0
-              500'000, // 1
-              750'000, // 2
-            1'000'000, // 3
-            1'250'000, // 4
-            1'500'000, // 5
-            1'750'000, // 6
-            2'000'000, // 7
+              1000,
+              24000,
         };
 
         /* MAKE SURE TO UPDATE THIS VALUE WITH EVERY MAJOR RELEASE BEFORE A FORK */
-        const uint64_t SOFTWARE_SUPPORTED_FORK_INDEX     =                                                           0;
+        const uint64_t SOFTWARE_SUPPORTED_FORK_INDEX     =                                                           1;
         const uint64_t FORK_HEIGHTS_SIZE                 =                sizeof(FORK_HEIGHTS) / sizeof(*FORK_HEIGHTS);
 
         /* The index in the FORK_HEIGHTS array that this version of the software will
