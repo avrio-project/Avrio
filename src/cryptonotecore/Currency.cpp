@@ -189,7 +189,11 @@ namespace CryptoNote
         uint64_t &reward,
         int64_t &emissionChange) const
     {
-        
+        if (alreadyGeneratedCoins >= 10000 * 215000) { // block 215000
+            reward = 0;
+            logger(TRACE) << "(END OF LIFE) Block reward " << reward;
+            return true;
+        }
         uint64_t baseReward = 10000; // (1 AIO) 
 
         logger(TRACE) << "Base reward " << baseReward;
