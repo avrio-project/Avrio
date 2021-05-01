@@ -23,30 +23,29 @@ build_script:
   - md build
   - cd build
   - cmake -G "Visual Studio 16 2019" -A x64 .. -DARCH=default -DOPENSSL_ROOT_DIR=C:\OpenSSL-v111-Win64
-  - MSBuild Xenium.sln /p:CLToolExe=clcache.exe /p:CLToolPath=c:\Python37\Scripts\ /p:Configuration=Release /m
-  - src\Release\XeniumCryptotest.exe
+  - MSBuild Avrio.sln /p:CLToolExe=clcache.exe /p:CLToolPath=c:\Python37\Scripts\ /p:Configuration=Release /m
 
 after_build:
   - clcache -s
   - if not defined APPVEYOR_REPO_TAG_NAME (set APPVEYOR_REPO_TAG_NAME=%APPVEYOR_REPO_COMMIT%)
   - cd src\Release
-  - mkdir Xenium-%APPVEYOR_REPO_TAG_NAME%
-  - copy *.exe Xenium-%APPVEYOR_REPO_TAG_NAME%
-  - copy ..\..\..\LICENSE Xenium-%APPVEYOR_REPO_TAG_NAME%
-  - 7z a Xenium-%APPVEYOR_REPO_TAG_NAME%-windows.zip Xenium-%APPVEYOR_REPO_TAG_NAME%
-  - copy Xenium-%APPVEYOR_REPO_TAG_NAME%-windows.zip ..\..\..\
+  - mkdir Avrio-%APPVEYOR_REPO_TAG_NAME%
+  - copy *.exe Avrio-%APPVEYOR_REPO_TAG_NAME%
+  - copy ..\..\..\LICENSE Avrio-%APPVEYOR_REPO_TAG_NAME%
+  - 7z a Avrio-%APPVEYOR_REPO_TAG_NAME%-windows.zip Avrio-%APPVEYOR_REPO_TAG_NAME%
+  - copy Avrio-%APPVEYOR_REPO_TAG_NAME%-windows.zip ..\..\..\
 
 artifacts:
-  - path: Xenium-$(APPVEYOR_REPO_TAG_NAME)-windows.zip
-    name: XeniumRelease
+  - path: Avrio-$(APPVEYOR_REPO_TAG_NAME)-windows.zip
+    name: AvrioRelease
 
 deploy:
   - provider: GitHub
     auth_token:
-      secure: 0uekag1omrW5tY0pMftRq2qcZXruBi68Y+m7qi5GhAIQ0420DslI8qPswrcc8PE4
-    artifact: XeniumRelease
+      secure: GD9rRRErKPfPZM71xvjImOjRQiTNLp4nRIPygmfb+aRzU+V/Wyp5Z5zIgt5rXGf7
+    artifact: AvrioRelease
     draft: false
     prerelease: false
     on:
-      appveyor_repo_name: xenium-project/xenium
+      appveyor_repo_name: avrio-project/avrio
       appveyor_repo_tag: true
