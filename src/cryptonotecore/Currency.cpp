@@ -189,38 +189,39 @@ namespace CryptoNote
         uint64_t &reward,
         int64_t &emissionChange) const
     {
-        if (alreadyGeneratedCoins >= 10000 * 215000) { // block 215000
+        if (alreadyGeneratedCoins >= 2150000000) { // block 215000
             reward = 0;
             logger(TRACE) << "(END OF LIFE) Block reward " << reward;
             return true;
+        } else {
+            uint64_t baseReward = 10000; // (1 AIO) 
+
+            logger(TRACE) << "Base reward " << baseReward;
+
+            if (alreadyGeneratedCoins == 0 && m_genesisBlockReward != 0) {
+                baseReward = m_genesisBlockReward;
+            }
+
+            size_t blockGrantedFullRewardZone = blockGrantedFullRewardZoneByBlockVersion(blockMajorVersion);
+            medianSize = std::max(medianSize, blockGrantedFullRewardZone);
+            if (currentBlockSize > UINT64_C(2) * medianSize)
+            {
+                logger(TRACE) << "Block cumulative size is too big: " << currentBlockSize << ", expected less than "
+                              << 2 * medianSize;
+                return false;
+            }
+
+            uint64_t penalizedBaseReward = getPenalizedAmount(baseReward, medianSize, currentBlockSize);
+            uint64_t penalizedFee =
+                blockMajorVersion >= BLOCK_MAJOR_VERSION_2 ? getPenalizedAmount(fee, medianSize, currentBlockSize) : fee;
+
+            emissionChange = penalizedBaseReward - (fee - penalizedFee);
+            reward = penalizedBaseReward + penalizedFee;
+
+            logger(TRACE) << "Block reward " << reward;
+
+            return true;
         }
-        uint64_t baseReward = 10000; // (1 AIO) 
-
-        logger(TRACE) << "Base reward " << baseReward;
-
-        if (alreadyGeneratedCoins == 0 && m_genesisBlockReward != 0) {
-            baseReward = m_genesisBlockReward;
-        }
-
-        size_t blockGrantedFullRewardZone = blockGrantedFullRewardZoneByBlockVersion(blockMajorVersion);
-        medianSize = std::max(medianSize, blockGrantedFullRewardZone);
-        if (currentBlockSize > UINT64_C(2) * medianSize)
-        {
-            logger(TRACE) << "Block cumulative size is too big: " << currentBlockSize << ", expected less than "
-                          << 2 * medianSize;
-            return false;
-        }
-
-        uint64_t penalizedBaseReward = getPenalizedAmount(baseReward, medianSize, currentBlockSize);
-        uint64_t penalizedFee =
-            blockMajorVersion >= BLOCK_MAJOR_VERSION_2 ? getPenalizedAmount(fee, medianSize, currentBlockSize) : fee;
-
-        emissionChange = penalizedBaseReward - (fee - penalizedFee);
-        reward = penalizedBaseReward + penalizedFee;
-
-        logger(TRACE) << "Block reward " << reward;
-
-        return true;
     }
 
     size_t Currency::maxBlockCumulativeSize(uint64_t height) const
